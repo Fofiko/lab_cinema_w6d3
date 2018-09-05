@@ -13,7 +13,10 @@ Cinema.prototype.getFilmTitles = function () {
   return filmTitles
 };
 
-
+Cinema.prototype.findByTitle = function (title) {
+  const film = this.films.find( film => title === film.title);
+  return film
+};
 
 
 module.exports = Cinema;
