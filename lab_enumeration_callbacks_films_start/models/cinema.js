@@ -25,16 +25,23 @@ Cinema.prototype.findByGenre = function (genre) {
 
 Cinema.prototype.checkByYear = function (year) {
   const filmsInYear = this.films.find( film => year === film.year);
-  console.log(filmsInYear);
   if (filmsInYear !== undefined) {
-    return true
+    return true;
   }
   else {
-    return false
+    return false;
   };
 };
 
-
+Cinema.prototype.allFilmsOverLength = function (length) {
+  const filmsOverLength = this.films.filter( film => length <= film.length);
+  if (this.films.length === filmsOverLength.length) {
+    return true;
+  }
+  else {
+    return false;
+  };
+};
 
 
 
