@@ -43,7 +43,10 @@ Cinema.prototype.allFilmsOverLength = function (length) {
   };
 };
 
-
+Cinema.prototype.runningTime = function () {
+  const runTime = this.films.reduce( (total, film) => total += film.length , 0);
+  return runTime;
+};
 
 
 
