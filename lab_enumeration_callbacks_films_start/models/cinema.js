@@ -10,12 +10,17 @@ const Cinema = function (films) {
 Cinema.prototype.getFilmTitles = function () {
   const filmTitles = this.films.map ( film => {
     return film.title});
-  return filmTitles
+  return filmTitles;
 };
 
 Cinema.prototype.findByTitle = function (title) {
   const film = this.films.find( film => title === film.title);
-  return film
+  return film;
+};
+
+Cinema.prototype.findByGenre = function (genre) {
+  const filmsByGenre = this.films.filter( film => genre === film.genre);
+  return filmsByGenre;
 };
 
 
